@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  VITE_BASE_URL: http://localhost:8800/
+
 jobs:
   build:
     name: Build
