@@ -1,0 +1,81 @@
+
+
+.searchTech form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.searchTech .opsList{
+    position: fixed;
+    background-color: white;
+    z-index: 999;
+    margin: 0;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.searchTech .opsList li{
+    width: 280px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+    
+}
+.notShow{
+    display: none;
+}
+
+.searchTech .opsList li:hover{
+    cursor: pointer;
+    background-color: rgb(203, 207, 207);
+}
+
+.searchTech form input {
+    flex: 1;
+    min-height: 50px;
+    padding: 0 1rem;
+    font-size: 15px;
+    border: 1px solid #28282B;
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+}
+
+.searchTech form input {
+    flex: 1;
+    min-height: 30px;
+    padding: 0 0.4rem;
+    margin-right: 4px;
+    font-size: 15px;
+    border: 1px solid #28282B;
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+}
+
+.searchTech form input:focus,
+.searchTech form input:focus-visible {
+    border-color: #3898EC;
+    outline: none;
+}
+
+
+.searchTech form button {
+    height: 100%;
+    min-height: 32px;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    color: #28282B;
+    font-size: 42px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.searchTech form button:hover {
+    color: #3898EC;
+}

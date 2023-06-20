@@ -1,0 +1,24 @@
+.map{
+    background-color: brown;
+    flex: 1;
+    text-align: end;
+}
+
+.leaflet-control{
+    display: none;
+    opacity: 0;
+}
+
+.leaflet-marker-icon{
+    display: none;
+    opacity: 0;
+}
+
+/* path.leaflet-interactive{
+    display: none; 
+    opacity: 0;
+} */
+
+.leaflet-interactive{
+    
+}

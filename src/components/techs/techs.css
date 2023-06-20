@@ -1,0 +1,38 @@
+.techs{
+    height: 92vh;
+    background-color:#F5F5F5;
+    width: 300px;
+    position: relative;
+    z-index: 99;
+    border-right: 1px solid #EDEADE;
+}
+
+.tech{
+    display:flex;
+    align-items: center;
+    padding: 2px 0px;
+}
+
+.tech:hover{
+    cursor: pointer;
+}
+
+.tech .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.tech .label{
+    flex: 1;
+    font-size: 15px;
+}
+
+.tech .addmap{
+    border-radius: 5px;
+    padding:2px;
+    background-color: #28282B;
+    color: white;
+    font-size: 12px;
+}
