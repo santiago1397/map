@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       ),
     },
  
-  ], {basename: "/map"});
+  ], {basename: "https://santiago1397.github.io/map/"});
 
 createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
