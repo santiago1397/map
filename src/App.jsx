@@ -88,7 +88,7 @@ function App() {
         console.log(err)
       }
 
-      navigate(`/${key}`)
+      navigate(`/map/${key}`)
       navigate(0)
     }else{
       let lmao = crypto.randomUUID();
@@ -100,7 +100,7 @@ function App() {
         console.log(err)
       }
 
-      navigate(`/${lmao}`)
+      navigate(`/map/${lmao}`)
       navigate(0)
     }
   }
@@ -122,7 +122,7 @@ function App() {
       if (key){
         const res = await axios.get(BASEURL +"api/acc/" +  key)
         if(res.data == "err"){
-          navigate(`/`)
+          navigate(`/map/`)
           navigate(0)
         }
       }
