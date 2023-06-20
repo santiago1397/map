@@ -17,16 +17,13 @@ const router = createHashRouter([
       ),
       children: [
         {
-          path: ":key",
+          path: "/map/:key",
           element: <App/>,
         },
       ],
     },
-    {
-      path: "/map/:key",
-      element: <App/>,
-    }, 
-  ],{ basename: import.meta.env.DEV ? '/' : 'https://santiago1397.github.io/map/' });
+ 
+  ],{ basename: import.meta.env.DEV ? '/' : '/map/' });
 
 createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
