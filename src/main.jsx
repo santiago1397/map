@@ -5,12 +5,11 @@ import './index.css'
 import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
+  createHashRouter,
   RouterProvider,
-  Route,
-  Link,
 } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
       path: "/map/",
       element: (
