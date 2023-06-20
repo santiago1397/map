@@ -16,11 +16,17 @@ const router = createBrowserRouter([
       element: (
         <App/>
       ),
+      children: [
+        {
+          path: ":key",
+          element: <App/>,
+        },
+      ],
     },
-    {
+    /* {
       path: "/map/:key",
       element: <App/>,
-    },
+    }, */
   ], { basename: import.meta.env.DEV ? '/' : '/map/' });
 
 createRoot(document.getElementById('root')).render(
