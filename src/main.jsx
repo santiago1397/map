@@ -9,7 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
     {
       path: "/map/",
       element: (
