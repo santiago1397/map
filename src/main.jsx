@@ -11,13 +11,13 @@ import {
 
 const router = createBrowserRouter([
     {
-      path: "/map/",
+      path: "/",
       element: (
         <App/>
       ),
     },
     {
-      path: "/map/:key",
+      path: "/:key",
       element: (
         <App/>
       ),
