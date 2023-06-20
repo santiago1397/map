@@ -29,7 +29,7 @@ const router = createHashRouter([
       ),
     },
  
-  ]);
+  ], {basename: "/map"});
 
 createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
