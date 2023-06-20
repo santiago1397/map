@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  VITE_BASE_URL: http://localhost:8800/
+  VITE_BASE_URL: https://map-api-4ltm.onrender.com
 
 jobs:
   build:
