@@ -15,12 +15,6 @@ const router = createHashRouter([
       element: (
         <App/>
       ),
-      /* children: [
-        {
-          path: "/map/:key",
-          element: <App/>,
-        },
-      ], */
     },
     {
       path: "/map/:key",
