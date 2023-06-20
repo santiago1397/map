@@ -15,15 +15,21 @@ const router = createHashRouter([
       element: (
         <App/>
       ),
-      children: [
+      /* children: [
         {
           path: "/map/:key",
           element: <App/>,
         },
-      ],
+      ], */
+    },
+    {
+      path: "/map/:key",
+      element: (
+        <App/>
+      ),
     },
  
-  ],{ basename: import.meta.env.DEV ? '/' : '/map/' });
+  ]);
 
 createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
