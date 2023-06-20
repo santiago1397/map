@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
   }
 
   if (command !== 'serve') {
-    config.base = '/map/'
+    config.base = 'https://santiago1397.github.io/map/'
   }
 
   return config

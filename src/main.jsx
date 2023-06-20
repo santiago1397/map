@@ -26,7 +26,7 @@ const router = createHashRouter([
       path: "/map/:key",
       element: <App/>,
     }, 
-  ],{ basename: import.meta.env.DEV ? '/' : '/map/' });
+  ],{ basename: import.meta.env.DEV ? '/' : 'https://santiago1397.github.io/map/' });
 
 createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
