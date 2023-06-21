@@ -32,8 +32,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/:key" element={<App />} />
+        <Route path="/map/" element={<App />} />
+        <Route path="/map/:key" element={<App />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
