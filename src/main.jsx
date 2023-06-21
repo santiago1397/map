@@ -7,24 +7,35 @@ import {
   createBrowserRouter,
   createHashRouter,
   RouterProvider,
+  BrowserRouter, 
+  Route, 
+  Routes 
 } from "react-router-dom";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: (
-        <App/>
-      ),
-    },
-    {
-      path: "/:key",
-      element: (
-        <App/>
-      ),
-    },
- 
-  ], {basename: "https://santiago1397.github.io/map/"});
+  {
+    path: "/",
+    element: (
+      <App />
+    ),
+  },
+  {
+    path: "/:key",
+    element: (
+      <App />
+    ),
+  },
 
-createRoot(document.getElementById('root')).render(
-    <RouterProvider router={router} />
+], { basename: "https://santiago1397.github.io/map/" });
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/:key" element={<App />} />
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>,
 )
+
