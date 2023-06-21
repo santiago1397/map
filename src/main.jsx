@@ -7,6 +7,7 @@ import {
   createBrowserRouter,
   createHashRouter,
   RouterProvider,
+  HashRouter,
   BrowserRouter, 
   Route, 
   Routes 
@@ -30,12 +31,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/map/" element={<App />} />
         <Route path="/map/:key" element={<App />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
 )
 
