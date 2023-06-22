@@ -27,16 +27,11 @@ const router = createBrowserRouter([
     ),
   },
 
-], { basename: "https://santiago1397.github.io/map/" });
+], );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HashRouter>
-      <Routes>
-        <Route path="/map/" element={<App />} />
-        <Route path="/map/:key" element={<App />} />
-      </Routes>
-    </HashRouter>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
 
