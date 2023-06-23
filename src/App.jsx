@@ -18,48 +18,8 @@ export const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org/search?";
 function App() {
   const account = "santiago"
 
-  const DATA = [
-    {
-      id: "123",
-      techname: "Caio",
-      address: "idk1",
-      details: "idk",
-      lat: "41.861625",
-      lon: "-87.988492",
-      appts: []
-    },
-    {
-      id: "321",
-      techname: "Gustavo",
-      address: "idk2",
-      details: "idk",
-      lat: "41.925006",
-      lon: "-88.000680",
-      appts: []
-    },
-
-  ]
-  const DATA1 = [
-    {
-      id: "1",
-      techname: "Caio",
-      address: "idk1",
-      currentJob: "idk",
-      lat: "41.861625",
-      lon: "-87.988492",
-      appts: []
-    },
-    {
-      id: "2",
-      techname: "Gustavo",
-      address: "idk2",
-      currentJob: "idk",
-      lat: "41.925006",
-      lon: "-88.000680",
-      appts: []
-    },
-
-  ]
+  const DATA = []
+  const DATA1 = []
   const BASEURL =  import.meta.env.VITE_BASE_URL
 
   const [details, setDetails] = useState()
