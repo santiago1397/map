@@ -107,10 +107,23 @@ export default function Map(props) {
 
         {(avTechs.length > 0) ?
           avTechs.map((item, index) => {
+            const aux = item.currentJob.match(/[\x00-\x7F]/g)
+            const aux2 = [...new Set(aux)]
+            console.log(item.techname, aux2)
+            let lmao
+            if ((aux2.length === 1) && (aux2.includes(' ') || aux2.includes('\n'))) {
+              lmao = "blue"
+            } else if ((aux2.length === 2) && (aux2.includes(' ') && aux2.includes('\n'))) {
+              lmao = "blue"
+            } else if (item.currentJob == "") {
+              lmao = "blue"
+            } else {
+              lmao = "red"
+            }
             return (
               < CircleMarker
                 center={[item?.lat, item?.lon]}
-                pathOptions={{ fillColor: (item.currentJob == "") ? "blue" : "red" }}
+                pathOptions={{ fillColor: lmao }}
                 fillOpacity={1}
                 color="white"
                 key={index}>
@@ -124,7 +137,7 @@ export default function Map(props) {
           ""
         }
 
-        <Eta avTechs={avTechs} job={job} setClosest={setClosest} closest={closest}/>
+        <Eta avTechs={avTechs} job={job} setClosest={setClosest} closest={closest} />
 
 
         <ResetCenterView focus={focus} />

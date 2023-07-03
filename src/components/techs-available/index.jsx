@@ -112,7 +112,7 @@ export default function TechsAvailable(props) {
 
     for(let i=0; i<newArr.length; i++) {
       for(let j=0; j<newArr[i].appts.length; j++){
-        newArr[i].appts[j] = {...newArr[i].appts[j], id: newArr[i].appts[j]._id}
+        newArr[i].appts[j] = {...newArr[i].appts[j], _id: newArr[i].appts[j]._id}
       }
     }
     
@@ -150,8 +150,23 @@ export default function TechsAvailable(props) {
                 component="nav"
                 aria-label="main mailbox folders"
               >
-                {avTechs.map((item, index) => (
-                  <Draggable key={item.id} draggableId={item.id} index={index}>
+                {avTechs.map((item, index) => {
+                  const aux = item.currentJob.match(/[\x00-\x7F]/g)
+                  const aux2 = [...new Set(aux)]
+                  console.log(item.techname, aux2)
+                  let lmao
+                  if ((aux2.length === 1) && (aux2.includes(' ') || aux2.includes('\n'))) {
+                    lmao = "techIcon1"
+                  }else if((aux2.length === 2) && (aux2.includes(' ') && aux2.includes('\n'))){
+                    lmao = "techIcon1"
+                  }else if(item.currentJob == ""){
+                    lmao = "techIcon1"
+                  } else {
+                    lmao = "techIcon"
+                  }
+                  
+                  return(
+                  <Draggable key={item._id} draggableId={item._id} index={index}>
                     {(provided) => (
                       <div
                         {...provided.draggableProps}
@@ -159,7 +174,12 @@ export default function TechsAvailable(props) {
                         ref={provided.innerRef}
                       >
                         <li className="tech" onClick={() => { setOpsActive(item); setFocus(item) }}>
-                          <div className={item.currentJob == "" ? "techIcon1" : "techIcon"}>
+                          <div className={
+                            
+                            lmao
+                            /* item.currentJob == "" ? "techIcon1" : "techIcon" */
+                            
+                            }>
                             <CircleIcon fontSize="inherit" />
                           </div>
                           <div>
@@ -170,7 +190,7 @@ export default function TechsAvailable(props) {
                       </div>
                     )}
                   </Draggable>
-                ))}
+                )})}
                 {provided.placeholder}
               </List>
             </div>

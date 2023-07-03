@@ -352,7 +352,7 @@ export default function TechOptions(props) {
           </div>
           :
           <div >
-            <form className="fields">
+            <div className="fields">
               <label htmlFor="name">Name:</label>
               <input className="nameInput" id="name" type="text" placeholder="Tech Name"
                 value={name}
@@ -362,10 +362,10 @@ export default function TechOptions(props) {
                 }}
                 onBlur={(e) => changeObjects("techname", e.target.value, opsActive._id)}
               />
-            </form>
+            </div>
 
             <div className="techFields" style={{ flex: "1" }} >
-              <form className="fields">
+              <div className="fields">
                 <label htmlFor="adress">Address:</label>
                 <input
                   className="nameInput"
@@ -381,7 +381,7 @@ export default function TechOptions(props) {
                   onFocus={() => setShow(true)}
                   onBlur={async () => { await timeout(200); setShow(false) }}
                 />
-              </form>
+              </div>
 
               <ul className={show ? "opsList" : "notShow"} >
                 {listPlace.map((place, index) => (

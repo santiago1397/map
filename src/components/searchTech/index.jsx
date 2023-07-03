@@ -6,6 +6,7 @@ import { NOMINATIM_BASE_URL } from '../../App';
 import { useDebounce } from "@uidotdev/usehooks";
 import axios from 'axios'
 import {useParams} from 'react-router-dom'
+import mongoose from 'mongoose'
 
 export default function SearchTech(props) {
   const BASEURL =  import.meta.env.VITE_BASE_URL
@@ -90,8 +91,11 @@ export default function SearchTech(props) {
             {listPlace.map((place, index) => (
               <li onClick={async() => {
                 const randId = crypto.randomUUID()
+                let lol = new mongoose.Types.ObjectId()
+              
                 if (ops){
-                  const lmao = await axios.post(BASEURL +"api/avtechs/" ,{
+                  await axios.post(BASEURL +"api/avtechs/" ,{
+                    _id: lol,
                     key: key,
                     techname: searchText,
                     address: place.display_name,
@@ -100,10 +104,9 @@ export default function SearchTech(props) {
                     lon: place.lon,
                   })
 
-                  console.log(lmao)
 
                   setItems([...items, {
-                    _id: lmao.data._id,
+                    _id: lol,
                     techname: searchText,
                     address: place.display_name,
                     currentJob: "",
